@@ -1,0 +1,18 @@
+{
+	"python.jediEnabled": false,
+	"python.autoComplete.addBrackets":true,
+
+	// format
+	//"coc.preferences.formatOnSaveFiletypes": ["python"],
+	"python.formatting.provider": "autopep8",
+	"python.formatting.autopep8Args": ["--line-length","80"],
+	
+	// lint
+	"python.linting.enabled": true,
+	"python.linting.flake8Args": ["--max-line-length=80"],
+	"python.linting.flake8Enabled":true,
+
+	"python.condaPath": "conda"
+
+}
+
