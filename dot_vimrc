@@ -43,7 +43,7 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 "-------------------------------
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'alker0/chezmoi.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
