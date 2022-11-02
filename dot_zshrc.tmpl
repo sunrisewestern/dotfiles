@@ -31,6 +31,7 @@ ZSH_THEME="ys"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -143,13 +144,15 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 #export LS_COLORS=export 
 #zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-if [ -f ~/.env ]
-then
-	source ~/.env
-fi
-
 # machine-specific configuration
 {{- if eq .chezmoi.homeDir "/Users/cxx" }}
+# env 
+export JAVA_HOME=$(/usr/libexec/java_home)
+export cxxpc=/Volumes/xiaoxi
+export PYTHONPATH=$HOME/xiaoxi/pyscripts
+export PATH="/Users/cxx/opt/anaconda3/bin:$PATH"
+export PATH="/Users/cxx/opt/bin:$PATH"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/cxx/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
