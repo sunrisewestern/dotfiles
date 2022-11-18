@@ -6,3 +6,4 @@
 .config/mpv
 {{ end }}
 
+key.txt.age
