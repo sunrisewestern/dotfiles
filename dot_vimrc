@@ -8,8 +8,9 @@ set modelines=0		" CVE-2007-2438
 set nocompatible	" Use Vim defaults instead of 100% vi compatibility
 set backspace=2		" more powerful backspacing
 
-set tabstop=4
-set shiftwidth=4
+set expandtab
+set tabstop=2
+set shiftwidth=2
 set textwidth=119
 
 set number "line number
@@ -188,6 +189,8 @@ func! CompileRunGcc()
 endfunc
 
 autocmd	bufNewfile *.py 0r $HOME/.vim/template/01get_gene_locus.py
+autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
+
 
 """"" set paste no paste to F4
 "set pastetoggle=<F4>
