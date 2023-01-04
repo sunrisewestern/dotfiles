@@ -7,6 +7,7 @@
 .config/raycast
 .config/RectangleConfig.json
 .config/iterm2
+.iterm2_shell_integration.zsh
 
 {{ end }}
 
