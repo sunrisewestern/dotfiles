@@ -4,6 +4,11 @@
 {{- if ne .chezmoi.os "darwin" }}
 .aria2
 .config/mpv
+.config/raycast
+.config/RectangleConfig.json
+.config/iterm2
+
 {{ end }}
+
 
 key.txt.age
