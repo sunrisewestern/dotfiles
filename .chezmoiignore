@@ -1,4 +1,4 @@
-*/cache/
+*/cache/**
 */*.log
 
 {{- if ne .chezmoi.os "darwin" }}
