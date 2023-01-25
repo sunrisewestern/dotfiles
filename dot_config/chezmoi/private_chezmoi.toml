@@ -6,3 +6,7 @@ encryption = "age"
 [git]
     autoCommit = true
     autoPush = false
+
+[warnings]
+    configFileTemplateHasChanged = false
+
