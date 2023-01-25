@@ -1,0 +1,20 @@
+# .bash_profile
+
+export SHELL=~/anaconda3/bin/zsh
+[ -z "$ZSH_VERSION" ] && exec "$SHELL" -l
+
+if [ -f ~/.zshrc ]; then
+    . ~/.zshrc
+fi
+
+
+# Get the aliases and functions
+#if [ -f ~/.bashrc ] && [ -z "$BASH" ] ; then
+#    . ~/.bashrc
+#fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+export PATH
