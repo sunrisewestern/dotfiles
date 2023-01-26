@@ -10,5 +10,8 @@
 .iterm2_shell_integration.zsh
 {{ end }}
 
+{{- if eq .chezmoi.os "darwin" }}
+.bash_profile
+{{ end }}
 
 key.txt.age
