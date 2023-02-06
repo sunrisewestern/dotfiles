@@ -6,7 +6,3 @@ auto_activate_base: false
 channel_priority: flexible
 changeps1: false
 solver: libmamba
-create_default_packages:
-  - ipykernel
-  - flake8
-  - black
