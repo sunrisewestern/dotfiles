@@ -10,7 +10,7 @@
 .iterm2_shell_integration.zsh
 {{ end }}
 
-{{- if eq .chezmoi.os "darwin" }}
+{{- if ne .chezmoi.os "linux" }}
 .bash_profile
 {{ end }}
 
