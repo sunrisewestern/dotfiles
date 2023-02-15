@@ -25,6 +25,7 @@
     url = "https://github.com/VundleVim/Vundle.vim.git"
     refreshPeriod = "168h"
 
+{{ if eq .chezmoi.os "linux" -}}
 {{ $ageVersion := "1.1.1" -}}
 [".local/bin/age"]
     type = "file"
@@ -34,3 +35,4 @@
     [".local/bin/age".filter]
         command = "tar"
         args = ["--extract", "--file", "/dev/stdin", "--gzip", "--to-stdout", "age/age"]
+{{ end -}}
