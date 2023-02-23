@@ -1,6 +1,6 @@
 # .bash_profile
 
-export SHELL=~/.local/zsh/bin/zsh
+export SHELL=$(which zsh)
 [ -z "$ZSH_VERSION" ] && exec "$SHELL" -l
 
 if [ -f ~/.zshrc ]; then
