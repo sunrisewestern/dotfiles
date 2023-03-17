@@ -1,6 +1,6 @@
 # .bash_profile
 
-export SHELL=$(which zsh)
+export SHELL=~/anaconda3/bin/zsh
 [ -z "$ZSH_VERSION" ] && exec "$SHELL" -l
 
 if [ -f ~/.zshrc ]; then
