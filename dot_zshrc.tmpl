@@ -203,7 +203,7 @@ else
 fi
 unset __conda_setup
 
-{{- if eq .chezmoi.os "darwin" }}
+{{- if ne .chezmoi.os "darwin" }}
 export PATH="{{ .chezmoi.homeDir }}/anaconda3/bin:$PATH"
 {{- end }}
 
