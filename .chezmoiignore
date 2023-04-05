@@ -8,6 +8,7 @@
 .config/RectangleConfig.json
 .config/iterm2
 .iterm2_shell_integration.zsh
+Library/QuickLook/QLStephen.qlgenerator/Contents/Info.plist
 {{ end }}
 
 {{- if ne .chezmoi.os "linux" }}
