@@ -10,6 +10,7 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+    include = ["*/*.zsh", "*/.version", "*/.revision-hash", "*/highlighters/**"]
 [".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
     type = "archive"
     url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
@@ -19,7 +20,7 @@
 [".oh-my-zsh/custom/themes/ys.zsh-theme"]
 	type = "file"
     url = "https://raw.githubusercontent.com/sunrisewestern/zsh_theme/main/ys.zsh-theme"
-    refreshPeriod = "168h"
+    refreshPeriod = "672h"
 [".vim/bundle/Vundle.vim"]
 	type = "git-repo"
     url = "https://github.com/sunrisewestern/Vundle.vim.git"
