@@ -127,11 +127,18 @@ alias cutc='cut -d,'
 alias awkc='awk -F ,'
 alias awkt='awk -F "\t"'
 alias gawkc='gawk -F ,'
-alias ll='ls -lhc'
 alias sb='source ~/.zshrc'
 alias vb='vim ~/.zshrc'
 alias wl='wc -l'
 alias cz='chezmoi'
+
+if command -v lsd > /dev/null; then
+    alias ls='lsd'
+fi
+alias ll='ls -lh'
+alias la='ls -a'
+alias lt='ls --tree'
+alias lla='ls -lha'
 
 function lec {
 	perl -pe 's/((?<=,)|(?<=^)),/ ,/g;' "$@"|column -t -s,|less -F -S -K -N
