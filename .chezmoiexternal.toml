@@ -41,10 +41,11 @@
 {{ if eq .chezmoi.os "linux" -}}
 {{ if eq .chezmoi.arch "amd64" -}}
 [".local/bin/lsd"]
-	type = "archive-file"
-	url = "https://github.com/lsd-rs/lsd/releases/download/v1.0.0/lsd-v1.0.0-i686-unknown-linux-musl.tar.gz"
-  path =  "lsd-v1.0.0-i686-unknown-linux-musl/lsd"
-	stripComponents = 1
-	refreshPeriod = "168h"
+  type = "file"
+  url = "https://github.com/lsd-rs/lsd/releases/download/v1.0.0/lsd-v1.0.0-i686-unknown-linux-musl.tar.gz"
+  refreshPeriod = "168h"
+  [".local/bin/lsd".filter]
+    command = "tar"
+    args = ["--extract", "--file", "/dev/stdin", "--gzip", "--to-stdout", "lsd-v1.0.0-i686-unknown-linux-musl/lsd"]
 {{ end -}}
 {{ end -}}
