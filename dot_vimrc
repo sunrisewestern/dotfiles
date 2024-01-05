@@ -51,8 +51,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'lfv89/vim-interestingwords'
 Plugin 'frazrepo/vim-rainbow'
-Plugin 'preservim/nerdcommenter'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 "-------------------------------
 "
