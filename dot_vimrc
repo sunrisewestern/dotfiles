@@ -53,6 +53,7 @@ Plugin 'lfv89/vim-interestingwords'
 Plugin 'frazrepo/vim-rainbow'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 "-------------------------------
 "
