@@ -23,7 +23,7 @@
     refreshPeriod = "672h"
 [".vim/bundle/Vundle.vim"]
 	type = "git-repo"
-    url = "https://github.com/sunrisewestern/Vundle.vim.git"
+    url = "https://github.com/VundleVim/Vundle.vim.git"
     refreshPeriod = "168h"
 
 {{ if eq .chezmoi.os "linux" -}}
