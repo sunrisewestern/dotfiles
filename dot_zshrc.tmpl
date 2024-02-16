@@ -117,6 +117,7 @@ VI_MODE_SET_CURSOR=true
 
 ################# my setting ####################
 
+export PATH="$HOME/.local/bin:$PATH"
 
 # alias
 alias rm='rm -i'
@@ -160,7 +161,6 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 #export LS_COLORS=export 
 #zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-export PATH="$HOME/.local/bin:$PATH"
 
 {{- if eq .chezmoi.os "linux" }}
 
