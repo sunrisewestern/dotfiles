@@ -120,6 +120,10 @@ VI_MODE_SET_CURSOR=true
 export PATH="$HOME/.local/bin:$PATH"
 
 # alias
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
+
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
