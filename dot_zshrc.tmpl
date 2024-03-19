@@ -141,8 +141,13 @@ alias sudocode='SUDO_EDITOR="$(which code) --wait" sudoedit'
 alias dc='docker compose'
 
 if command -v lsd > /dev/null; then
-    alias ls='lsd'
+  alias ls='lsd'
 fi
+
+if command -v radian > /dev/null; then
+  alias r="radian"
+fi
+
 alias ll='ls -lh'
 alias la='ls -a'
 alias lt='ls --tree'
@@ -165,6 +170,8 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 #export LS_COLORS=export 
 #zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
+# export conda base env to PATH
+export PATH="{{ .chezmoi.homeDir }}/anaconda3/bin:$PATH"
 
 {{- if eq .chezmoi.os "linux" }}
 
@@ -175,7 +182,6 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH="$HOME/opt/bin:$PATH"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
-alias r="radian"
 alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
