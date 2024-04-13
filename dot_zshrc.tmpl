@@ -171,13 +171,6 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 #export LS_COLORS=export 
 #zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-# export conda base env to PATH
-export PATH="{{ .chezmoi.homeDir }}/anaconda3/bin:$PATH"
-
-{{- if eq .chezmoi.os "linux" }}
-
-{{- end }}
-
 {{- if eq .chezmoi.os "darwin" }}
 # env 
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -211,6 +204,10 @@ create_ARM_conda_environment () {
 
 {{- end }}
 
+{{- if stat (joinPath .chezmoi.homeDir "anaconda3")}}
+# export conda base env to PATH
+export PATH="{{ .chezmoi.homeDir }}/anaconda3/bin:$PATH"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('{{ .chezmoi.homeDir }}/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -224,9 +221,6 @@ else
     fi
 fi
 unset __conda_setup
-
-{{- if ne .chezmoi.os "darwin" }}
-export PATH="{{ .chezmoi.homeDir }}/anaconda3/bin:$PATH"
-{{- end }}
-
 # <<< conda initialize <<<
+
+{{- end }}
