@@ -119,10 +119,6 @@ VI_MODE_SET_CURSOR=true
 
 export PATH="$HOME/.local/bin:$PATH"
 
-# alias
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
-fi
 
 alias rm='rm -i'
 alias cp='cp -i'
@@ -170,6 +166,11 @@ function ncol {
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 #export LS_COLORS=export 
 #zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# alias
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
 
 {{- if eq .chezmoi.os "darwin" }}
 # env 
