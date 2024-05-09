@@ -38,14 +38,26 @@
         args = ["--extract", "--file", "/dev/stdin", "--gzip", "--to-stdout", "age/age"]
 {{ end -}}
 
+{{ $lsdVersion := "1.1.2" -}}
+
 {{ if eq .chezmoi.os "linux" -}}
 {{ if eq .chezmoi.arch "amd64" -}}
 [".local/bin/lsd"]
   type = "file"
-  url = "https://github.com/lsd-rs/lsd/releases/download/v1.0.0/lsd-v1.0.0-i686-unknown-linux-musl.tar.gz"
+  url = "https://github.com/lsd-rs/lsd/releases/download/v{{ $lsdVersion }}/lsd-v{{ $lsdVersion }}-i686-unknown-linux-musl.tar.gz"
   refreshPeriod = "168h"
   [".local/bin/lsd".filter]
     command = "tar"
-    args = ["--extract", "--file", "/dev/stdin", "--gzip", "--to-stdout", "lsd-v1.0.0-i686-unknown-linux-musl/lsd"]
+    args = ["--extract", "--file", "/dev/stdin", "--gzip", "--to-stdout", "lsd-v{{ $lsdVersion }}-i686-unknown-linux-musl/lsd"]
+{{ end -}}
+
+{{ if eq .chezmoi.arch "arm64" -}}
+[".local/bin/lsd"]
+  type = "file"
+  url = "https://github.com/lsd-rs/lsd/releases/download/v{{ $lsdVersion }}/lsd-v{{ $lsdVersion }}-arm-unknown-linux-gnueabihf.tar.gz"
+  refreshPeriod = "168h"
+  [".local/bin/lsd".filter]
+    command = "tar"
+    args = ["--extract", "--file", "/dev/stdin", "--gzip", "--to-stdout", "lsd-v{{ $lsdVersion }}-arm-unknown-linux-gnueabihf/lsd"]
 {{ end -}}
 {{ end -}}
