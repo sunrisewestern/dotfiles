@@ -52,12 +52,12 @@
 {{ end -}}
 
 {{ if eq .chezmoi.arch "arm64" -}}
-[".local/bin/lsd"]
-  type = "file"
-  url = "https://github.com/lsd-rs/lsd/releases/download/v{{ $lsdVersion }}/lsd-v{{ $lsdVersion }}-arm-unknown-linux-gnueabihf.tar.gz"
-  refreshPeriod = "168h"
-  [".local/bin/lsd".filter]
-    command = "tar"
-    args = ["--extract", "--file", "/dev/stdin", "--gzip", "--to-stdout", "lsd-v{{ $lsdVersion }}-arm-unknown-linux-gnueabihf/lsd"]
+# [".local/bin/lsd"]
+#   type = "file"
+#   url = "https://github.com/lsd-rs/lsd/releases/download/v{{ $lsdVersion }}/lsd-v{{ $lsdVersion }}-arm-unknown-linux-gnueabihf.tar.gz"
+#   refreshPeriod = "168h"
+#   [".local/bin/lsd".filter]
+#     command = "tar"
+#     args = ["--extract", "--file", "/dev/stdin", "--gzip", "--to-stdout", "lsd-v{{ $lsdVersion }}-arm-unknown-linux-gnueabihf/lsd"]
 {{ end -}}
 {{ end -}}
