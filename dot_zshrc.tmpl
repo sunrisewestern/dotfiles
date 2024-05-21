@@ -172,6 +172,12 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
+# zsh integration
+
+if [ -f ~/.iterm2_shell_integration.zsh ]; then
+  source ~/.iterm2_shell_integration.zsh
+fi
+
 {{- if eq .chezmoi.os "darwin" }}
 # env 
 export JAVA_HOME=$(/usr/libexec/java_home)
