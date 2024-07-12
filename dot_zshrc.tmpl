@@ -84,6 +84,7 @@ plugins=(
   virtualenv
   gh
   docker
+  common-aliases
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -123,14 +124,10 @@ VI_MODE_SET_CURSOR=true
 export PATH="$HOME/.local/bin:$PATH"
 
 
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
 alias py="python3"
 alias cutc='cut -d,'
 alias awkc='awk -F ,'
 alias awkt='awk -F "\t"'
-alias gawkc='gawk -F ,'
 alias sb='source ~/.zshrc'
 alias vb='vim ~/.zshrc'
 alias vc='vim ~/.ssh/config'
@@ -147,11 +144,6 @@ fi
 if command -v radian > /dev/null; then
   alias r="radian"
 fi
-
-alias ll='ls -lh'
-alias la='ls -a'
-alias lt='ls --tree'
-alias lla='ls -lha'
 
 function lec {
 	perl -pe 's/((?<=,)|(?<=^)),/ ,/g;' "$@"|column -t -s,|less -F -S -K -N
