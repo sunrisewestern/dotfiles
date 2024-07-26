@@ -157,12 +157,6 @@ function ncol {
 	awk -F "$1" 'NR==1{print NF}END{}' "$2"
 }
 
-function headgrep() {
-  local grep_pattern="\$1"
-  local out_file="\$2"
-  head -1 stat.csv > "$out_file"
-  grep "$grep_pattern" stat.csv >> "$out_file"
-}
 
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 #export LS_COLORS=export 
