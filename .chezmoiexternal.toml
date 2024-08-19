@@ -32,19 +32,7 @@
     url = "https://github.com/VundleVim/Vundle.vim.git"
     refreshPeriod = "168h"
 
-{{ if eq .chezmoi.os "linux" -}}
-{{ $ageVersion := "1.1.1" -}}
-[".local/bin/age"]
-    type = "file"
-    url = "https://github.com/FiloSottile/age/releases/download/v{{ $ageVersion }}/age-v{{ $ageVersion }}-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz"
-    executable = true
-    refreshPeriod = "168h"
-    [".local/bin/age".filter]
-        command = "tar"
-        args = ["--extract", "--file", "/dev/stdin", "--gzip", "--to-stdout", "age/age"]
-{{ end -}}
-
-{{ $lsdVersion := "1.1.2" -}}
+{{ $lsdVersion := "1.1.3" -}}
 
 {{ if eq .chezmoi.os "linux" -}}
 {{ if eq .chezmoi.arch "amd64" -}}
