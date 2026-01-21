@@ -1,8 +1,12 @@
 channels:
-  - defaults
+  - pytorch
   - bioconda
   - conda-forge
+nodefaults: true
+allow_other_channels: false
+show_channel_urls: true
 auto_activate_base: false
-channel_priority: flexible
+channel_priority: strict
 changeps1: false
 solver: libmamba
+
